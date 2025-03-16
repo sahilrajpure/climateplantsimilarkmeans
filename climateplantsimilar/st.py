@@ -36,7 +36,7 @@ st.markdown(
         /* Prevent body from shifting left and hide horizontal overflow */
         body {
             overflow-x: hidden;
-            position: fixed;
+            position: relative;
             width: 100vw;
         }
 
