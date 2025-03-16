@@ -51,7 +51,7 @@ st.markdown(
 }
 
 /* Adjust styles for mobile view */
-@media (max-width: 768px) {
+@media (max-width: 680px) {
     .green-box {
         left: -30px;
         right: -30px;
