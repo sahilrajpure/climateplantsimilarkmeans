@@ -95,8 +95,11 @@ st.markdown('<div class="logo-container">', unsafe_allow_html=True)
 st.image("climateplantsimilar/logoheade.png", use_container_width=True)
 st.markdown('</div>', unsafe_allow_html=True)
 
+# Add a green line after the image
+st.markdown("<hr style='border: 5px solid green;'>", unsafe_allow_html=True)
+
 # App Title and Description
-st.markdown("<h3 style='text-align: center;'>🌿 Plant Suitability Recommender</h3>", unsafe_allow_html=True)
+st.markdown("<h2 style='text-align: center;'>🌿 Plant Suitability Recommender</h3>", unsafe_allow_html=True)
 st.write("Enter your region's climate conditions to get the best plant recommendations.")
 
 # User Inputs
