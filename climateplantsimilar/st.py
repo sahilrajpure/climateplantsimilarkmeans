@@ -53,8 +53,8 @@ st.markdown(
 /* Adjust styles for mobile view */
 @media (max-width: 768px) {
     .green-box {
-        left: -50px;
-        right: -50px;
+        left: -40px;
+        right: -40px;
         height: calc(525vh - 10px);
     }
 }
