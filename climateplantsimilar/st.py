@@ -44,7 +44,7 @@ st.markdown(
             right: -60px;
             border: 5px solid green;
             box-sizing: border-box;
-            padding: 10px;
+            padding: 0px;
             background-color: white;
             box-shadow: 0px 0px 15px rgba(0, 128, 0, 0.5);
             display: flex;
