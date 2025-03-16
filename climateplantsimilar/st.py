@@ -55,7 +55,7 @@ st.markdown(
     .green-box {
         left: -30px;
         right: -30px;
-        height: calc(525vh - 10px);
+        height: calc(550vh - 10px);
     }
 }
 
