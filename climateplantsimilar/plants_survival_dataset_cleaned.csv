@@ -1,0 +1,135 @@
+Plant Name,Temperature (°C),Humidity (%),Sunlight Hours per Day,Rainfall (mm),Wind Speed (km/h)
+Acalypha australis,24.0,70.0,7.0,1250.0,10.0
+Ageratum conizoides,26.0,75.0,6.0,1400.0,15.0
+Annona squamosa,28.5,80.0,7.5,1000.0,7.5
+Aquinnah Passion Plant,23.0,70.0,7.0,1350.0,10.0
+Araucaria,17.5,60.0,6.0,800.0,22.5
+Areca palm,25.0,80.0,5.0,2000.0,7.5
+Arrowhead Plant,23.0,70.0,5.0,1400.0,8.5
+Artocarpus heterophyllus Lam,29.0,80.0,7.0,1500.0,10.0
+Ashoka,27.0,70.0,7.0,1250.0,10.0
+Aspidistra elatior,20.0,60.0,5.0,800.0,10.0
+Asplenium juglandifolium Lam,23.0,70.0,6.0,1250.0,7.5
+Bauhinia forficata,25.0,70.0,7.0,1400.0,8.5
+Black locust,17.5,60.0,6.0,800.0,15.0
+Blackboard tree,28.0,75.0,7.5,1200.0,10.0
+Boquila trifoliolata (DC.),23.0,70.0,5.0,1250.0,7.5
+Bourreria,27.0,75.0,6.0,1000.0,10.0
+Caesalpinia pluviosa,26.0,70.0,7.0,1400.0,8.5
+California bay,20.0,60.0,6.0,800.0,15.0
+Calophyllum inophyllum,28.0,80.0,7.5,1600.0,7.5
+Camachile Tree,29.0,70.0,7.0,1250.0,10.0
+Cannonball Tree,28.0,80.0,7.5,1600.0,7.5
+Carica papaya L.,28.5,77.5,7.5,1600.0,10.0
+Caryota ophiopellis,25.0,70.0,6.5,1400.0,7.5
+Cassia fistula,29.0,72.5,7.0,1250.0,10.0
+Cassia javanica,28.0,77.5,7.5,1400.0,7.5
+Casuarina Equisetifolia,27.5,62.5,6.5,1000.0,15.0
+Ceylon creeper,23.0,70.0,5.0,1250.0,7.5
+Chinese fan palm,27.0,72.5,7.0,1500.0,8.5
+Chloroxylon swietenia,26.0,65.0,6.0,1300.0,8.5
+Cabada Palm,28.0,75.0,7.5,1500.0,7.5
+Coconut Tree,29.0,77.5,7.5,1600.0,7.5
+Cocos nucifera,29.5,77.5,7.5,1850.0,7.5
+Common lophatherum,25.0,65.0,6.0,1200.0,8.5
+Cordyline fruticosa,27.0,72.5,7.0,1250.0,8.5
+Cordyline stricta,28.0,75.0,7.5,1400.0,7.5
+Cordyline Terminalis,28.0,75.0,7.5,1400.0,7.5
+Crinum asiaticum,26.0,70.0,6.0,1300.0,8.5
+Cuphea fruticosa,23.0,70.0,5.0,1000.0,7.5
+Curcuma aeruginosa,27.0,72.5,7.0,1200.0,8.5
+Cyanthillium cinereum,28.0,72.5,7.0,1250.0,8.5
+Dianthera pectoralis,26.0,65.0,6.0,1200.0,7.5
+Dieffenbachia seguine,27.0,77.5,6.5,1500.0,7.5
+Dracaena american,25.0,70.0,5.5,1300.0,7.5
+Dracaena broad,28.0,75.0,7.5,1500.0,7.5
+Dragon Tree,28.5,72.5,7.5,1250.0,8.5
+Earleaf Arrowhead Vine,24.0,70.0,5.0,1000.0,7.5
+Empogona,28.0,77.5,7.5,1500.0,7.5
+Epipremnum amplissimum,29.0,77.5,7.5,1600.0,7.5
+Euphorbia lactea,29.5,62.5,6.5,1000.0,15.0
+Euphorbia ramipressa,26.0,65.0,6.0,1300.0,8.5
+Euphorbia tithymaloides,27.0,72.5,7.0,1250.0,8.5
+Ficus tinctoria,28.0,75.0,7.5,1400.0,7.5
+Garcinia morella,27.5,72.5,7.5,1500.0,7.5
+Garden croton,27.0,70.0,6.0,1300.0,8.5
+Geonoma,23.0,70.0,5.0,1000.0,7.5
+Graptophyllum pictum,28.0,75.0,7.5,1400.0,7.5
+Green Areca,28.0,75.0,7.5,1400.0,7.5
+Grumichama,28.5,80.0,7.0,1250.0,8.5
+Guava,28.5,75.0,7.0,1500.0,7.5
+Gustavia gracillima,28.0,72.5,7.0,1250.0,8.5
+Gynura procumbens,26.0,65.0,6.0,1200.0,7.5
+Heliconia latispatha,27.0,77.5,6.5,1500.0,7.5
+Hibiscus,25.0,70.0,5.5,1300.0,7.5
+Hibiscus rosa-sinensis,28.0,75.0,7.5,1500.0,7.5
+Holy Basil,28.5,72.5,7.5,1250.0,8.5
+Indian Almond,24.0,70.0,5.0,1000.0,7.5
+Indonesian Bay Leaf,28.0,77.5,7.5,1500.0,7.5
+Inga bella,29.0,77.5,7.5,1600.0,7.5
+Ixora,29.5,62.5,6.5,1000.0,15.0
+Japanese morning glory,26.0,65.0,6.0,1300.0,8.5
+Kalpvriksh Plant,27.0,72.5,7.0,1250.0,8.5
+Keith Mango,28.0,75.0,7.5,1400.0,7.5
+Leaf Almond Tree,27.5,72.5,7.5,1500.0,7.5
+Leucaena leucocephala,27.0,70.0,6.0,1300.0,8.5
+Litsea monopetala,23.0,70.0,5.0,1000.0,7.5
+Longevity Spinach,28.0,75.0,7.5,1400.0,7.5
+M. Codiaeum variegatum,28.0,75.0,7.5,1400.0,7.5
+Malabar Nut,28.5,80.0,7.0,1250.0,8.5
+Malabar Spinach,27.0,80.0,6.0,1400.0,7.5
+Mangifera indica,31.0,65.0,8.5,1000.0,15.0
+Mango Tree,31.0,65.0,8.5,1000.0,15.0
+Monkeypod,27.5,72.5,7.0,1150.0,10.0
+Murraya paniculata,28.0,75.0,7.0,1300.0,7.5
+Mussaenda philippica,26.0,72.5,7.0,1500.0,8.5
+Naagdon,26.0,77.5,6.0,1300.0,7.5
+Neem,31.5,57.5,7.5,750.0,17.5
+Nicotiana benthamiana,24.0,70.0,5.0,1000.0,7.5
+Night-blooming Jasmine,27.0,75.0,7.0,1250.0,7.5
+Orange Jessamine,28.0,75.0,7.0,1400.0,7.5
+Painted Bauhinia,27.5,62.5,7.0,1000.0,10.0
+Palm Tree,31.0,72.5,8.0,1150.0,15.0
+Pandanus tectorius,28.0,75.0,7.5,1500.0,7.5
+Paris tetraphylla,26.0,72.5,6.0,1300.0,7.5
+Peace Lily Plant,24.0,77.5,5.0,1250.0,7.5
+Peanut plant,28.5,62.5,7.5,700.0,12.5
+Pedilanthus tithymaloides,28.0,72.5,6.0,1300.0,7.5
+Pencil Tree,28.5,62.5,7.5,900.0,8.5
+Pentas Lanceolata,26.0,77.5,7.0,1250.0,7.5
+Piper aduncum,28.0,75.0,7.0,1300.0,7.5
+Plumbago zeylanica,27.5,65.0,7.0,1000.0,7.5
+Poison ivy,22.5,72.5,5.0,1250.0,8.5
+Polyalthia longifolia,30.0,65.0,8.5,1000.0,10.0
+Pometia pinnata,31.0,72.5,7.5,1250.0,7.5
+Premna odorata,26.0,72.5,6.0,1300.0,7.5
+Pseuderanthemum latifolium,28.0,75.0,7.0,1400.0,7.5
+Psidium guajava,29.0,65.0,8.5,900.0,10.0
+Psychotria viridis,28.0,75.0,7.0,1300.0,7.5
+Purple Caricature,27.0,77.5,7.0,1250.0,7.5
+R. Glycosmis pentaphylla,28.0,72.5,6.0,1000.0,7.5
+R. Ocotea puberula,27.5,72.5,7.0,1150.0,8.5
+Radermachera xylocarpa,28.5,62.5,7.5,900.0,8.5
+Red Frangipani,30.0,65.0,8.5,1000.0,10.0
+Renato lima,31.0,72.5,7.5,1250.0,7.5
+River tamarind,26.0,72.5,6.0,1300.0,7.5
+Rorippa gigantea,28.0,75.0,7.0,1400.0,7.5
+Samanea saman,29.0,65.0,8.5,900.0,10.0
+Saraca asoca,27.5,72.5,7.0,1150.0,8.5
+Screwpine,28.5,62.5,7.5,900.0,8.5
+Senegalia caesia,30.0,65.0,8.5,1000.0,10.0
+Setaria palmifolia,31.0,72.5,7.5,1250.0,7.5
+Simarouba,26.0,72.5,6.0,1300.0,7.5
+Song of India,28.0,75.0,7.0,1400.0,7.5
+Sterculia foetida,28.5,62.5,7.5,900.0,8.5
+Strobilanthes crispa,27.5,72.5,7.0,1150.0,5.0
+Swiss Cheese Plant,25.0,72.5,5.0,1250.0,8.5
+Syngonium podophyllum,25.0,75.0,5.0,1400.0,7.5
+Tamanu,28.5,65.0,7.0,1000.0,10.0
+Terminalia chebula,29.0,65.0,8.5,900.0,10.0
+Thevetia peruviana,28.0,72.5,7.0,1300.0,7.5
+Ti Plant,27.0,77.5,7.0,1250.0,7.5
+Tradescantia spathacea,28.0,72.5,6.0,1000.0,7.5
+Typhonium trilobatum (L.) Schott,27.5,72.5,7.0,1150.0,8.5
+Urtica parviflora,28.5,62.5,7.5,900.0,8.5
+Vitex,31.0,72.5,7.5,1250.0,7.5
