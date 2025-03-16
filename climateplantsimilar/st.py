@@ -33,14 +33,10 @@ def recommend_plants(temp, humidity, sunlight, wind_speed):
 st.markdown(
     """
     <style>
-        /* Prevent body from shifting left and hide horizontal overflow */
-        body {
+        html, body {
             overflow-x: hidden;
-            position: relative;
-            width: 100vw;
         }
 
-        /* Green box styling */
         .green-box {
             position: absolute;
             top: 5px;
@@ -94,7 +90,6 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-
 
 # Open the green box container
 st.markdown('<div class="green-box">', unsafe_allow_html=True)
