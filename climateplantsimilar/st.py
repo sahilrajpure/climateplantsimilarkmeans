@@ -35,12 +35,12 @@ st.markdown(
     <style>
         .green-box {
     position: absolute;
-    top: 10px;
+    top: 5px;
     left: -60px;
     right: -60px;
     border: 6px solid green;
     box-sizing: border-box;
-    padding: 20px;
+    padding: 10px;
     background-color: white;
     box-shadow: 0px 0px 15px rgba(0, 128, 0, 0.5);
     display: flex;
