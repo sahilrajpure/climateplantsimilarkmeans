@@ -101,7 +101,7 @@ st.markdown('</div>', unsafe_allow_html=True)
 
 # Add a green line after the image
 st.markdown(
-    "<hr style='border: 3px solid green; width: 100%; max-width: 823px; margin-top: 10px; margin-left: 10px; margin-right: 20px;'>",
+    "<hr style='border: 3px solid green; width: 100%; max-width: 923px; margin-top: 10px; margin-left: 10px; margin-right: 20px;'>",
     unsafe_allow_html=True
 )
 
