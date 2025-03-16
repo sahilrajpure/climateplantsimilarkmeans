@@ -8,7 +8,7 @@ from sklearn.cluster import KMeans
 from sklearn.neighbors import NearestNeighbors
 
 
-df = pd.read_csv("plants_survival_dataset_cleaned.csv")
+df = pd.read_csv("climateplantsimilar/plants_survival_dataset_cleaned.csv")
 
 # Select features for clustering and recommendation
 features = ["Temperature (°C)", "Humidity (%)", "Sunlight Hours per Day", "Wind Speed (km/h)"]
@@ -98,7 +98,7 @@ st.markdown('<div class="green-box">', unsafe_allow_html=True)
 
 # Display the logo
 st.markdown('<div class="logo-container">', unsafe_allow_html=True)
-st.image("logoheade.png", use_column_width=True)
+st.image("climateplantsimilar/logoheade.png", use_column_width=True)
 st.markdown('</div>', unsafe_allow_html=True)
 
 # App Title and Description
