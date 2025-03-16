@@ -29,12 +29,6 @@ def recommend_plants(temp, humidity, sunlight, wind_speed):
     distances, indices = knn.kneighbors(input_data)
     return df.iloc[indices[0]], input_data
 
-import os
-import matplotlib.pyplot as plt
-import seaborn as sns
-import pandas as pd
-import numpy as np
-
 # CSS
 st.markdown(
     """
@@ -136,7 +130,7 @@ if st.button("Get Plant Recommendations 🌱"):
         st.write(f"**- {plant['Plant Name']}**")
         image_path = f"C:/Users/Sahil/Downloads/plant_images/{plant['Plant Name'].replace(' ', '_')}.jpg"
         if os.path.exists(image_path):
-            st.image(image_path, caption=plant["Plant Name"], use_column_width=True)
+            st.image(image_path, caption=plant["Plant Name"], use_container_width=True)
 
     # Visual 1: Cluster Plot
     st.subheader("📌 Understanding the K-Means Cluster Plot")
