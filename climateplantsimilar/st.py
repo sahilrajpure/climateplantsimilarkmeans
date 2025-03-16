@@ -100,7 +100,10 @@ st.image("climateplantsimilar/logoheade.png", use_container_width=True)
 st.markdown('</div>', unsafe_allow_html=True)
 
 # Add a green line after the image
-st.markdown("<hr style='border: 3px solid green; width: 823px; margin-top: 10px; margin-left: -60px;'>", unsafe_allow_html=True)
+st.markdown(
+    "<hr style='border: 3px solid green; width: 100%; max-width: 823px; margin-top: 10px; margin-left: auto; margin-right: auto;'>",
+    unsafe_allow_html=True
+)
 
 # App Title and Description
 st.markdown("<h2 style='text-align: center;'>🌿 Plant Suitability Recommender</h3>", unsafe_allow_html=True)
