@@ -33,31 +33,39 @@ def recommend_plants(temp, humidity, sunlight, wind_speed):
 st.markdown(
     """
     <style>
-        .green-box {
-    position: absolute;
-    top: 5px;
-    left: -60px;
-    right: -60px;
-    border: 6px solid green;
-    box-sizing: border-box;
-    padding: 10px;
-    background-color: white;
-    box-shadow: 0px 0px 15px rgba(0, 128, 0, 0.5);
-    display: flex;
-    height: calc(550vh - 10px);
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
+        /* Prevent body from shifting left and hide horizontal overflow */
+        body {
+            overflow-x: hidden;
+            position: fixed;
+            width: 100vw;
+        }
 
-/* Adjust styles for mobile view */
-@media (max-width: 680px) {
-    .green-box {
-        left: -30px;
-        right: -30px;
-        height: calc(550vh - 10px);
-    }
-}
+        /* Green box styling */
+        .green-box {
+            position: absolute;
+            top: 5px;
+            left: -60px;
+            right: -60px;
+            border: 6px solid green;
+            box-sizing: border-box;
+            padding: 10px;
+            background-color: white;
+            box-shadow: 0px 0px 15px rgba(0, 128, 0, 0.5);
+            display: flex;
+            height: calc(550vh - 10px);
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Adjust styles for mobile view */
+        @media (max-width: 680px) {
+            .green-box {
+                left: -30px;
+                right: -30px;
+                height: calc(550vh - 10px);
+            }
+        }
 
         /* Center the logo and make it responsive */
         .logo-container {
@@ -86,6 +94,7 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
 
 # Open the green box container
 st.markdown('<div class="green-box">', unsafe_allow_html=True)
