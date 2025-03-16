@@ -36,8 +36,8 @@ st.markdown(
         .green-box {
     position: absolute;
     top: 10px;
-    left: -70px;
-    right: -70px;
+    left: -60px;
+    right: -60px;
     border: 6px solid green;
     box-sizing: border-box;
     padding: 20px;
@@ -53,8 +53,8 @@ st.markdown(
 /* Adjust styles for mobile view */
 @media (max-width: 768px) {
     .green-box {
-        left: -40px;
-        right: -40px;
+        left: -30px;
+        right: -30px;
         height: calc(525vh - 10px);
     }
 }
