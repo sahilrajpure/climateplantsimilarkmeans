@@ -92,7 +92,7 @@ st.markdown('<div class="green-box">', unsafe_allow_html=True)
 
 # Display the logo
 st.markdown('<div class="logo-container">', unsafe_allow_html=True)
-st.image("climateplantsimilar/logoheade.png", use_column_width=True)
+st.image("climateplantsimilar/logoheade.png", use_container_width=True)
 st.markdown('</div>', unsafe_allow_html=True)
 
 # App Title and Description
