@@ -9,7 +9,7 @@ from sklearn.neighbors import NearestNeighbors
 from PIL import Image
 
 
-df = pd.read_csv("plants_survival_dataset_cleaned.csv")
+df = pd.read_csv("climateplantsimilar/plants_survival_dataset_cleaned.csv")
 
 # Load dataset
 file_path = "Copy of dataset testing.xlsx"
