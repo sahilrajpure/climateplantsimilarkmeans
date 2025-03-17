@@ -7,7 +7,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.cluster import KMeans
 from sklearn.neighbors import NearestNeighbors
 from PIL import Image
-
+import openpyxl
 
 df = pd.read_csv("climateplantsimilar/plants_survival_dataset_cleaned.csv")
 
