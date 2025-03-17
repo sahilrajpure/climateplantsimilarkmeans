@@ -201,7 +201,7 @@ if st.button("Get Plant Recommendations 🌱"):
 
     for _, plant in recommended_plants.iterrows():
         plant_name = plant["Plant Name"]
-        image_url = get_image_url(plant_name)  # Generate dynamic image URL
+        image_url = get_image_url(plant_name) 
 
         # Try to get plant info
         plant_info = df1[df1["Common Name"].str.lower() == plant_name.lower()]
@@ -227,7 +227,7 @@ if st.button("Get Plant Recommendations 🌱"):
         youtube_link = get_value("YouTube Search Link")
 
         # Create Columns for a Neat Layout
-        col1, col2 = st.columns([1, 2])
+        col1, col2 = st.columns([2, 2])
 
         with col1:
             try:
