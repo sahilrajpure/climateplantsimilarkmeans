@@ -106,7 +106,7 @@ st.markdown(
         .stPlotlyChart, .stImage {
             border-radius: 10px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
-            padding: 20px;
+            padding: 0px;
         }
 
         /* Divider */
