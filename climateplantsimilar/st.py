@@ -12,7 +12,7 @@ from PIL import Image
 df = pd.read_csv("climateplantsimilar/plants_survival_dataset_cleaned.csv")
 
 # Load dataset
-file_path = "Copy of dataset testing.xlsx"
+file_path = "climateplantsimilar/Copy of dataset testing.xlsx"
 df1 = pd.read_excel(file_path)
 
 
