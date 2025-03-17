@@ -6,9 +6,15 @@ import os
 from sklearn.preprocessing import StandardScaler
 from sklearn.cluster import KMeans
 from sklearn.neighbors import NearestNeighbors
+from PIL import Image
 
 
-df = pd.read_csv("climateplantsimilar/plants_survival_dataset_cleaned.csv")
+df = pd.read_csv("plants_survival_dataset_cleaned.csv")
+
+# Load dataset
+file_path = "Copy of dataset testing.xlsx"
+df1 = pd.read_excel(file_path)
+
 
 # Select features for clustering and recommendation
 features = ["Temperature (°C)", "Humidity (%)", "Sunlight Hours per Day", "Wind Speed (km/h)"]
@@ -33,40 +39,92 @@ def recommend_plants(temp, humidity, sunlight, wind_speed):
 st.markdown(
     """
     <style>
-        html, body {
-            overflow-x: hidden;
-        }
-
-        .green-box {
-            position: absolute;
-            top: 0px;
-            left: -60px;
-            right: -60px;
-            border: 5px solid green;
-            box-sizing: border-box;
-            padding: 0px;
-            background-color: white;
-            box-shadow: 0px 0px 15px rgba(0, 128, 0, 0.5);
-            display: flex;
-            height: calc(550vh - 10px);
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-
-        /* Adjust styles for mobile view */
-        @media (max-width: 680px) {
-            .green-box {
-                left: -30px;
-                right: -30px;
-                height: calc(550vh - 10px);
-            }
-        }
-
-        /* Center the logo and make it responsive */
+        /* Logo Container */
         .logo-container {
-            text-align: center;
+            display: flex;
+            justify-content: center;
+            padding: 10px;
             margin-bottom: 20px;
+        }
+
+        /* Title Styling */
+        h1 {
+            text-align: center;
+            color: black;
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+
+        /* Sliders Styling */
+        .stSlider > div {
+            background: linear-gradient(135deg, white, #85e085);
+            padding: 8px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        /* Input Selection Box */
+        .stSlider label {
+            font-size: 16px;
+            font-weight: bold;
+            color: black;
+        }
+
+        /* Styled Plant Cards */
+        .plant-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s ease-in-out;
+            margin-bottom: 20px;
+        }
+
+        .plant-card:hover {
+            transform: scale(1.02);
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25);
+        }
+
+        /* Button Styling */
+        .stButton > button {
+            background: linear-gradient(135deg, #4CAF50, #8BC34A);
+            color: white;
+            font-size: 18px;
+            padding: 12px;
+            border-radius: 8px;
+            border: none;
+            transition: 0.3s ease;
+            cursor: pointer;
+        }
+
+        .stButton > button:hover {
+            background: linear-gradient(135deg, #45a049, #6fa82c);
+            transform: scale(1.05);
+        }
+
+        /* Charts Styling */
+        .stPlotlyChart, .stImage {
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+            padding: 10px;
+        }
+
+        /* Divider */
+        hr {
+            border: 1px solid #ddd;
+            margin: 20px 0;
+        }
+
+        /* Links */
+        a {
+            color: #2c3e50;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            color: #16a085;
+            text-decoration: underline;
         }
 
         /* Aligns everything properly */
@@ -83,7 +141,7 @@ st.markdown(
         .text-container {
             font-size: 18px;
             font-weight: bold;
-            color: green;
+            color: white;
             margin-bottom: 20px;
         }
     </style>
@@ -91,22 +149,14 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-# Open the green box container
-st.markdown('<div class="green-box">', unsafe_allow_html=True)
 
 # Display the logo
 st.markdown('<div class="logo-container">', unsafe_allow_html=True)
-st.image("climateplantsimilar/logoheade.png", use_container_width=True)
+st.image("logoheade.png", use_column_width=True)
 st.markdown('</div>', unsafe_allow_html=True)
 
-# Add a green line after the image
-st.markdown(
-    "<hr style='border: 3px solid green; width: 100%; max-width: 923px; margin-top: 10px; margin-left: 10px; margin-right: 20px;'>",
-    unsafe_allow_html=True
-)
-
 # App Title and Description
-st.markdown("<h2 style='text-align: center;'>🌿 Plant Suitability Recommender</h3>", unsafe_allow_html=True)
+st.title("🌿 Plant Suitability Recommender")
 st.write("Enter your region's climate conditions to get the best plant recommendations.")
 
 # User Inputs
@@ -126,21 +176,78 @@ st.markdown("""
 """.format(temp=temp, humidity=humidity, sunlight=sunlight, wind_speed=wind_speed), unsafe_allow_html=True)
 
 
+# Function to limit the description to 3-4 key points
+def get_limited_description(description, limit=3):
+    if isinstance(description, str):
+        points = description.split(". ")[:limit]  # Get first 3 points
+        return ". ".join(points) + "." if points else "No description available."
+    return "No description available."
 
-# Close the green box container
-st.markdown('</div>', unsafe_allow_html=True)
+# Netlify Base URL for Hosting Images
+NETLIFY_IMAGE_BASE_URL = "https://endearing-snickerdoodle-25259f.netlify.app/images/"
 
-# Recommend Button
+# Default Placeholder Image (Stored Locally)
+DEFAULT_IMAGE = "placeholder.jpg"
+
+def get_image_url(plant_name):
+    formatted_name = plant_name.replace(" ", "%20") + ".jpg"
+    return f"{NETLIFY_IMAGE_BASE_URL}{formatted_name}"
+
+# Display Recommended Plants in a Structured Grid Layout
 if st.button("Get Plant Recommendations 🌱"):
     recommended_plants, input_point = recommend_plants(temp, humidity, sunlight, wind_speed)
-    
+
     st.success("🌿 Recommended Plants for Your Climate:")
-    
+
     for _, plant in recommended_plants.iterrows():
-        st.write(f"**- {plant['Plant Name']}**")
-        image_path = f"C:/Users/Sahil/Downloads/plant_images/{plant['Plant Name'].replace(' ', '_')}.jpg"
-        if os.path.exists(image_path):
-            st.image(image_path, caption=plant["Plant Name"], use_container_width=True)
+        plant_name = plant["Plant Name"]
+        image_url = get_image_url(plant_name)  # Generate dynamic image URL
+
+        # Try to get plant info
+        plant_info = df1[df1["Common Name"].str.lower() == plant_name.lower()]
+        if plant_info.empty:
+            plant_info = df1[df1["Scientific Name"].str.lower() == plant_name.lower()]
+
+        # Extract details or use defaults
+        def get_value(column):
+            return (
+                plant_info[column].values[0]
+                if column in plant_info.columns and pd.notna(plant_info[column].values[0])
+                else "Data not available"
+            )
+
+        common_name = get_value("Common Name")
+        scientific_name = get_value("Scientific Name")
+        plant_type = get_value("Type")
+        height = get_value("Height")
+        lifespan = get_value("Lifespan")
+        oxygen = get_value("Oxygen")
+        description = get_limited_description(get_value("Description"))
+        google_link = get_value("Google Search Link")
+        youtube_link = get_value("YouTube Search Link")
+
+        # Create Columns for a Neat Layout
+        col1, col2 = st.columns([1, 2])
+
+        with col1:
+            try:
+                st.image(image_url, caption=plant_name, use_column_width=True)
+            except:
+                st.image(DEFAULT_IMAGE, caption="Image Not Found", use_column_width=True)
+
+        with col2:
+            st.markdown(f"### 🌱 {common_name if common_name != 'Data not available' else plant_name}")
+            st.markdown(f"**Scientific Name:** {scientific_name}")
+            st.markdown(f"**Type:** {plant_type} | **Height:** {height} | **Lifespan:** {lifespan}")
+            st.markdown(f"**Oxygen Contribution:** {oxygen}")
+            st.markdown(f"📝 **Description:** {description}")
+
+            # Links for More Info
+            st.markdown(f"[🔍 Google It]({google_link}) | [🎥 Watch on YouTube]({youtube_link})")
+
+            # Add a Horizontal Divider
+            st.markdown("---")
+
 
     # Visual 1: Cluster Plot
     st.subheader("📌 Understanding the K-Means Cluster Plot")
@@ -210,5 +317,3 @@ if st.button("Get Plant Recommendations 🌱"):
     7. The bar chart provides a **quick and effective comparison of plant adaptability**.  
     8. This allows users to understand **why certain plants are recommended based on the given climate**.  
     """)
-
-
