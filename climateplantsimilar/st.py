@@ -106,7 +106,7 @@ st.markdown(
         .stPlotlyChart, .stImage {
             border-radius: 10px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
-            padding: 10px;
+            padding: 20px;
         }
 
         /* Divider */
@@ -227,7 +227,7 @@ if st.button("Get Plant Recommendations 🌱"):
         youtube_link = get_value("YouTube Search Link")
 
         # Create Columns for a Neat Layout
-        col1, col2 = st.columns([2, 2])
+        col1, col2 = st.columns([1, 2])
 
         with col1:
             try:
