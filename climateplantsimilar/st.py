@@ -231,9 +231,9 @@ if st.button("Get Plant Recommendations 🌱"):
 
         with col1:
             try:
-                st.image(image_url, caption=plant_name, use_column_width=True)
+                st.image(image_url, caption=plant_name, use_container_width=True)
             except:
-                st.image(DEFAULT_IMAGE, caption="Image Not Found", use_column_width=True)
+                st.image(DEFAULT_IMAGE, caption="Image Not Found", use_container_width=True)
 
         with col2:
             st.markdown(f"### 🌱 {common_name if common_name != 'Data not available' else plant_name}")
